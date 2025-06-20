@@ -25,3 +25,12 @@ codegen-units = 1
 lto = true
 opt-level = "s"
 # strip = true
+
+[package.metadata.rpm]
+package = "physicswallah-desktop"
+
+[package.metadata.rpm.cargo]
+buildflags = ["--release"]
+
+[package.metadata.rpm.targets]
+physicswallah-desktop = { path = "/usr/bin/physicswallah-desktop" }
